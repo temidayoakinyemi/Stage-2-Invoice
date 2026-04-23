@@ -1,24 +1,24 @@
-
 .invoicecard {
   width: 100%;
-  min-height: 72px;
-  background: #ffffff;
+  background: white;
   border-radius: 8px;
-  padding: 18px 24px;
+  padding: 20px 24px;
   display: grid;
-  grid-template-columns: 110px 140px 1fr 140px 110px 20px;
+  grid-template-columns: 120px 150px 1fr 120px 120px 20px;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 10px rgba(72, 84, 159, 0.04);
-  border: 1px solid transparent;
-  transition: 0.3s;
+  transition: 0.2s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .invoicecard:hover {
+  transform: translateY(-2px);
   border: 1px solid #7c5dfa;
 }
 
+/* ID */
 .invoiceid {
   font-size: 15px;
   font-weight: 700;
@@ -29,149 +29,115 @@
   color: #7e88c3;
 }
 
+/* Date */
 .invoicedate {
   font-size: 13px;
   color: #7e88c3;
-  font-weight: 500;
 }
 
+/* Name */
 .invoicename {
   font-size: 13px;
   color: #858bb2;
-  text-align: left;
 }
 
+/* Amount */
 .invoiceamount {
   font-size: 16px;
   font-weight: 700;
   color: #0c0e16;
 }
 
+/* STATUS BUTTON */
 .statusbtn {
   width: 104px;
   height: 40px;
-  border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border: none;
 }
 
+/* Paid */
+.paid {
+  background: rgba(51, 214, 159, 0.1);
+  color: #33d69f;
+}
+
+/* Pending */
+.pending {
+  background: rgba(255, 143, 0, 0.1);
+  color: #ff8f00;
+}
+
+/* Draft */
+.draft {
+  background: rgba(55, 59, 83, 0.1);
+  color: #373b53;
+}
+
+/* dot */
 .statusdot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  background: currentColor;
 }
 
-/* Paid */
-
-.paidstatus {
-  background: rgba(51, 214, 159, 0.08);
-  color: #33d69f;
-}
-
-.paidstatus .statusdot {
-  background: #33d69f;
-}
-
-/* Pending */
-
-.pendingstatus {
-  background: rgba(255, 143, 0, 0.08);
-  color: #ff8f00;
-}
-
-.pendingstatus .statusdot {
-  background: #ff8f00;
-}
-
-/* Draft */
-
-.draftstatus {
-  background: rgba(55, 59, 83, 0.08);
-  color: #373b53;
-}
-
-.draftstatus .statusdot {
-  background: #373b53;
-}
-
+/* arrow */
 .arrowicon {
   color: #7c5dfa;
-  font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-/* Tablet */
-
+/* TABLET */
 @media (max-width: 900px) {
-  .invoicecard {
-    grid-template-columns: 100px 120px 1fr 120px;
-    grid-template-areas:
-      "id date amount arrow"
-      "name name status status";
-    gap: 14px;
-    padding: 20px;
-  }
-
-  .invoiceid {
-    grid-area: id;
-  }
-
-  .invoicedate {
-    grid-area: date;
-  }
-
-  .invoiceamount {
-    grid-area: amount;
-  }
-
-  .arrowicon {
-    grid-area: arrow;
-    justify-self: end;
-  }
-
-  .invoicename {
-    grid-area: name;
-  }
-
-  .statusbtn {
-    grid-area: status;
-    justify-self: end;
-  }
-}
-
-/* Mobile */
-
-@media (max-width: 520px) {
   .invoicecard {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "id name"
-      "date date"
-      "amount status";
-    padding: 18px;
+      "id amount"
+      "date status"
+      "name arrow";
+    gap: 10px;
+  }
+
+  .invoiceid { grid-area: id; }
+  .invoicedate { grid-area: date; }
+  .invoicename { grid-area: name; }
+  .invoiceamount { grid-area: amount; }
+  .statusbtn { grid-area: status; }
+  .arrowicon { grid-area: arrow; justify-self: end; }
+}
+.deletebtn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deletebtn:hover {
+  background: #dc2626;
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+  .invoicecard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "id"
+      "name"
+      "date"
+      "amount"
+      "status";
   }
 
   .arrowicon {
     display: none;
-  }
-
-  .invoicename {
-    justify-self: end;
-    text-align: right;
-  }
-
-  .invoiceamount {
-    font-size: 15px;
-  }
-
-  .statusbtn {
-    width: 95px;
-    height: 38px;
-    font-size: 14px;
   }
 }

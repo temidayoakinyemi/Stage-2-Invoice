@@ -1,24 +1,27 @@
 import React from "react";
 import "./Sidebar.css";
-import logo from "../../assets/logo.png";
-import theme from "../../assets/theme.png";
-import avatar from "../../assets/avatar.png"
 
-const Sidebar = () => {
+const Sidebar = ({ toggleTheme, darkMode }) => {
   return (
     <div className="sidebar">
       <div className="sidebartop">
         <div className="logobox">
-          <img src={logo} alt="" className="logoimg" />
-        </div> 
+          <h2 style={{ color: "white" }}>F</h2>
+        </div>
       </div>
 
       <div className="sidebarbottom">
-        <img src={theme} alt="" className="themebtn" />
+        <button className="themebtn" onClick={toggleTheme}>
+          {darkMode ? "☀️ Light" : "🌙 Dark"}
+        </button>
 
-         <div className="avatarbox">
-          <img src={avatar} alt="" className="avatarimg" />
-        </div> 
+        <div className="avatarbox">
+          <img
+            className="avatarimg"
+            src="https://i.pravatar.cc/40"
+            alt="avatar"
+          />
+        </div>
       </div>
     </div>
   );

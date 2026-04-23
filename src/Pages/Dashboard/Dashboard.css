@@ -1,0 +1,107 @@
+.dashboard {
+  margin-left: 103px;
+  min-height: 100vh;
+  background: #f8f8fb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.dashboardcontainer {
+  width: 730px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TOP SECTION */
+.dashboardtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dashboardtop h1 {
+  font-size: 32px;
+  color: #0c0e16;
+}
+
+.dashboardtop p {
+  color: #888eb0;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.dashboardtop button {
+  background: #7c5dfa;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dashboardtop button:hover {
+  background: #9277ff;
+}
+
+/* CARDS CONTAINER */
+.dashboardcards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* THIS fixes spacing between cards */
+}
+
+.topactions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* FILTER DROPDOWN */
+.filterselect {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dfe3fa;
+  background: white;
+  font-size: 14px;
+  color: #0c0e16;
+  cursor: pointer;
+  outline: none;
+}
+
+.filterselect:focus {
+  border: 1px solid #7c5dfa;
+}
+
+/* NEW BUTTON */
+.newbtn {
+  background: #7c5dfa;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newbtn:hover {
+  background: #9277ff;
+}
+
+
+
+/* responsive */
+@media (max-width: 900px) {
+  .dashboard {
+    margin-left: 0;
+  }
+
+  .dashboardcontainer {
+    width: 100%;
+  }
+}

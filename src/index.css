@@ -1,24 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Josefin Sans"; 
+body.dark {
+  background: #141625;
 }
 
-body {
-  background-color: #161C21;
+body.dark .dashboard {
+  background: #141625;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  line-height: 0;
-  cursor: pointer;
+body.dark .invoicecard,
+body.dark .modalbox,
+body.dark .detailcard {
+  background: #1e2139;
+  color: white;
 }
 
-.container {
-  padding-left: 10%;
-  padding-right: 10%;
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p {
+  color: white;
 }
-

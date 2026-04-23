@@ -1,0 +1,30 @@
+.editinvoice {
+  padding: 40px;
+  background: #f8f8fb;
+  min-height: 100vh;
+}
+
+.editinvoice h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.editinvoice input,
+.editinvoice select {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #dfe3fa;
+  border-radius: 6px;
+}
+
+.editinvoice button {
+  padding: 12px 18px;
+  border: none;
+  background: #7c5dfa;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
