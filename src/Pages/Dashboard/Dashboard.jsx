@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 import InvoiceCard from "../../Components/InvoiceCard/InvoiceCard";
 import { getInvoices, saveInvoices } from "../../utils/storage";
 import "./Dashboard.css";
