@@ -1,0 +1,177 @@
+
+.invoicecard {
+  width: 100%;
+  min-height: 72px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 110px 140px 1fr 140px 110px 20px;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(72, 84, 159, 0.04);
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.invoicecard:hover {
+  border: 1px solid #7c5dfa;
+}
+
+.invoiceid {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c0e16;
+}
+
+.invoiceid span {
+  color: #7e88c3;
+}
+
+.invoicedate {
+  font-size: 13px;
+  color: #7e88c3;
+  font-weight: 500;
+}
+
+.invoicename {
+  font-size: 13px;
+  color: #858bb2;
+  text-align: left;
+}
+
+.invoiceamount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0c0e16;
+}
+
+.statusbtn {
+  width: 104px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.statusdot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Paid */
+
+.paidstatus {
+  background: rgba(51, 214, 159, 0.08);
+  color: #33d69f;
+}
+
+.paidstatus .statusdot {
+  background: #33d69f;
+}
+
+/* Pending */
+
+.pendingstatus {
+  background: rgba(255, 143, 0, 0.08);
+  color: #ff8f00;
+}
+
+.pendingstatus .statusdot {
+  background: #ff8f00;
+}
+
+/* Draft */
+
+.draftstatus {
+  background: rgba(55, 59, 83, 0.08);
+  color: #373b53;
+}
+
+.draftstatus .statusdot {
+  background: #373b53;
+}
+
+.arrowicon {
+  color: #7c5dfa;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .invoicecard {
+    grid-template-columns: 100px 120px 1fr 120px;
+    grid-template-areas:
+      "id date amount arrow"
+      "name name status status";
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .invoiceid {
+    grid-area: id;
+  }
+
+  .invoicedate {
+    grid-area: date;
+  }
+
+  .invoiceamount {
+    grid-area: amount;
+  }
+
+  .arrowicon {
+    grid-area: arrow;
+    justify-self: end;
+  }
+
+  .invoicename {
+    grid-area: name;
+  }
+
+  .statusbtn {
+    grid-area: status;
+    justify-self: end;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .invoicecard {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "id name"
+      "date date"
+      "amount status";
+    padding: 18px;
+  }
+
+  .arrowicon {
+    display: none;
+  }
+
+  .invoicename {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .invoiceamount {
+    font-size: 15px;
+  }
+
+  .statusbtn {
+    width: 95px;
+    height: 38px;
+    font-size: 14px;
+  }
+}
